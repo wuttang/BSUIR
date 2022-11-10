@@ -5,7 +5,7 @@ using namespace std;
 
 int main ()
 {
-    int n,m,j,i,oper,repeat;
+    int n,m,j,i,oper,repeat,div;
 
     vector<int> a; // Вводим первое множество
     vector<int> b; // Вводим второе множество
@@ -88,18 +88,76 @@ operation:
         }
         case 3: {
             // Операция разности
+            cout << "Выберите, какую разность вы хотите выполнить. 1 - A/B, 2 - B/A: ";
+            cin >> div;
+            switch(div)
+            {
+                case 1: { 
+                    // A/B
+                    for (i = 0; i<n; i++){
+                        for (j = 0; j<m; j++){
+                            if (a[i] == b[j]){
+                                break;
+                            } 
+                            if (j+1 == m) {
+                                c.push_back(a[i]);    
+                            }
+                        } 
+                    }
+                    // Выводим итоговое множество
+                    cout << "C = { ";
+                    for (i = 0; i<c.size(); i++){
+                        cout << c[i]<< " ";
+                    }
+                    cout << "}\n";
+                    break;
+                }
+                case 2: {
+                    // B/A
+                    for (i = 0; i<m; i++){
+                        for (j = 0; j<n; j++){
+                            if (b[i] == a[j]){
+                                break;
+                            } 
+                            if (j+1 == n) {
+                                c.push_back(b[i]);    
+                            }
+                        } 
+                    }
+
+                    // Выводим итоговое множество
+                    cout << "C = { ";
+                    for (i = 0; i<c.size(); i++){
+                        cout << c[i]<< " ";
+                    }
+                    cout << "}\n"; 
+                    break;
+                }
+            }
+            break;
         }
         case 4: {
             // Операция симметрической разности
-            for (int i = 0; i < n; i++) {
-                c.push_back(a[i]);
-            }
-
             for (i = 0; i<n; i++){
                 for (j = 0; j<m; j++){
                     if (a[i] == b[j]){
+                        break;
+                    } 
+                    if (j+1 == m) {
+                        c.push_back(a[i]);    
                     }
-                }
+                } 
+            }
+
+            for (i = 0; i<m; i++){
+                for (j = 0; j<n; j++){
+                    if (b[i] == a[j]){
+                        break;
+                    } 
+                    if (j+1 == n) {
+                        c.push_back(b[i]);    
+                    }
+                } 
             }
 
             // Выводим итоговое множество
@@ -109,6 +167,10 @@ operation:
             }
             cout << "}\n"; 
             break;
+        }
+        case 5: {
+            // Операция Декартового произведения
+
         }
         default: cout << "Выберите операцию"; return 0;
     }
