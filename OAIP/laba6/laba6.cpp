@@ -1,32 +1,25 @@
-// variant 4
-
-#include <iostream>  
+#include <stdio.h>
 #include <stdlib.h>
-
-using namespace std;
-
+ 
 int main()
 {
-    int j = 0,num = 0;
-    char str[500]= "111100011001111100000";
-    cout << "Строка: " << str << endl;
-
-    for (int i=0; i<strlen(str); i++){
-        if (str[i] == '1'){
-            j++;
-            num = j;
-            if (str[i] == '0'){
-                if(!(num%2)){
-                    cout << num;
-                } 
-            }
+    char str[256] = "1110000\0";
+ 
+    printf("%s\n",str);
+ 
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        int k = i;
+        while (str[i] == str[i+1]) i++;
+ 
+        if ((abs(k-i) % 2))
+        {
+            for (int t = k; t <= i; t++)
+                printf("%c", str[t]);
+ 
+            printf("\n");
         }
-        /*else if (str[i] == '0'){
-            if (!(num%2)){
-                cout << num;
-            }
-        }*/
     }
-
+ 
     return 0;
 }
