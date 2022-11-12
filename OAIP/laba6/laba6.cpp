@@ -7,13 +7,26 @@ using namespace std;
 
 int main()
 {
-    char a[1000];
-    cout << "Введите строку, состоящую из групп 0 и 1: ";
-    cin >> a;
-    for (int i = 0; i<1000; i++){
-        if (a[i] != '0' && a[i] != '1'){
-            cout << "Строка должна состоять из 0 и 1!";
+    int j = 0,num = 0;
+    char str[500]= "111100011001111100000";
+    cout << "Строка: " << str << endl;
+
+    for (int i=0; i<strlen(str); i++){
+        if (str[i] == '1'){
+            j++;
+            num = j;
+            if (str[i] == '0'){
+                if(!(num%2)){
+                    cout << num;
+                } 
+            }
         }
+        /*else if (str[i] == '0'){
+            if (!(num%2)){
+                cout << num;
+            }
+        }*/
     }
+
     return 0;
 }
