@@ -2,12 +2,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
  
 int main()
 {
-    char str[256] = "1110000\0";
+    char str[256] = "11100001110011\0";
  
-    printf("%s\n",str);
+    std::cout << str;
  
     for (int i = 0; str[i] != '\0'; i++)
     {
