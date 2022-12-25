@@ -6,9 +6,9 @@
  
 int main()
 {
-    char str[256] = "11100001110011\0";
+    char str[256] = "11100001110011000001111110000001100\0";
  
-    std::cout << str;
+    std::cout << str << "\n";
  
     for (int i = 0; str[i] != '\0'; i++)
     {
