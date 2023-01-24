@@ -10,14 +10,14 @@ int main()
     int choice = 0;
     int fib_num = 0;
     int i = 2, i1 = 1, i2 = 1;
-    cout << "Введите число: ";
+    cout << "Введите число: " << "\x1b[32m ";
     n = num_check();
-    cout << "Выберите, каким образом хотите выполнить программу: 1 - рекурсивным, 2 - циклическим: ";
+    cout << "\x1b[0m" << "Выберите, каким образом хотите выполнить программу: 1 - рекурсивным, 2 - циклическим: ";
     cin >> choice;
     switch(choice)
     {
         case 1: {
-            cout << "Fb(" << n << ") = " << fibonacci_numbers(n);
+            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fibonacci_numbers(n) << endl;
             } break;
         case 2: {
             while (i < n) {
@@ -26,9 +26,9 @@ int main()
                 i2 = fib_num;
                 i++;
             }
-            cout << "Fb(" << n << ") = " << fib_num;
+            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fib_num << endl;
         } break;
-        default: cout << "Некорректный ввод";
+        default: cout << "\x1b[31m" << "Некорректный ввод" << "\x1b[30m" << endl;
     }
     return 0;
 
