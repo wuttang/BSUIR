@@ -17,7 +17,7 @@ int main()
     switch(choice)
     {
         case 1: {
-            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fibonacci_numbers(n) << endl;
+            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fibonacci_numbers(n) << "\x1b[0m" <<endl;
             } break;
         case 2: {
             while (i < n) {
@@ -26,7 +26,7 @@ int main()
                 i2 = fib_num;
                 i++;
             }
-            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fib_num << endl;
+            cout << "Fb(" << "\x1b[32m" << n << "\x1b[0m" << ") = " << "\x1b[36m" << fib_num << "\x1b[0m" << endl;
         } break;
         default: cout << "\x1b[31m" << "Некорректный ввод" << "\x1b[30m" << endl;
     }
@@ -44,11 +44,13 @@ unsigned int num_check()
 {   
     unsigned int n;
     do {
+        cout << "\x1b[32m";
         cin >> n;
+        cout << "\x1b[0m";
         if (!cin || cin.get() != '\n') {
             cin.clear();
             cin.ignore((numeric_limits<streamsize>::max)(), '\n');
-            cout << "Повторите попытку: ";
+            cout << "\x1b[31m" << "Повторите попытку: " << "\x1b[0m";
         } else {
             return n;
         }
