@@ -1,0 +1,1 @@
+bus_arr[i].arrival_time_hour
