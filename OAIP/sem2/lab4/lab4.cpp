@@ -52,7 +52,7 @@ void swap_first_last(Queue* queue) {
     queue->tail->data = first_data;
 }
 
-void print_queue(Queue* queue) {
+void print_queue(Queue* queue) { 
     Node* node = queue->head;
     while (node) {
         cout << node->data << " ";

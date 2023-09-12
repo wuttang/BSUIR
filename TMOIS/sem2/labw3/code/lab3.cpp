@@ -13,7 +13,7 @@ int** SimRas(int** A, int** B, int mA, int mB);		// Симметричная р�
 int** dopolneniye(int** U, int** W, int mU, int mW);// Дополнение
 int** Inversion(int** M, int mM);					// Инверсия
 int** Exposition(int** A, int** B, int mA, int mB);	// Композиция графиков
-void clearMemory(int** arr, int rows) {
+void  clearMemory(int** arr, int rows) {
     for (int i = 0; i < rows; ++i) {
         delete[] arr[i];
     }

@@ -1,0 +1,45 @@
+series_set
+        <-sc_node_class;
+        ->concept_series;;
+
+concept_series
+        => nrel_main_idtf:
+        [Сериал]
+        (* <- lang_rus;;*);
+        [Series]
+        (* <- lang_en;;*);;
+
+concept_series <= nrel_sc_text_translation:...
+        (*
+                <- definition;;
+                -> [Сериал — ряд последовательно расположенных частей многосерийного фильма, представляющих собой единое целое.];;
+        *);;
+
+concept_series => nrel_components:...
+    (*
+      <- sc_node_not_binary_tuple;;
+      -> concept_director;;
+      -> concept_soundtrack;;
+      -> concept_producer;;
+    *);;
+
+details_set 
+        <- sc_node_class;
+        -> concept_director;;
+        -> concept_soundtrack;;
+        -> concept_producer;;
+
+concept_series => nrel_appointment: emotions;;
+mental_impact_set
+        <- sc_node_class;
+        -> emotions;;
+
+concept_series => nrel_inventor: Conan_Doyle;;
+person_set
+        <- sc_node_class;
+        -> Conan_Doyle;;
+
+concept_series => nrel_time_of_first_appearance: 1946_y.;;
+time_period_set
+        <- sc_node_class;
+        -> 1946_y.;; 
