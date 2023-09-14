@@ -1,3 +1,0 @@
-/Users/wuttang/BSUIR/OS/LW_2/side task/cmake-build-debug/CMakeFiles/side_task.dir
-/Users/wuttang/BSUIR/OS/LW_2/side task/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/wuttang/BSUIR/OS/LW_2/side task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
