@@ -1,0 +1,3 @@
+/Users/wuttang/BSUIR/OS/LW_2/main task/cmake-build-debug/CMakeFiles/lab222.dir
+/Users/wuttang/BSUIR/OS/LW_2/main task/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wuttang/BSUIR/OS/LW_2/main task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
