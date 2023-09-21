@@ -62,26 +62,26 @@ public class CantorSet {
         return set3;
     }
 
-    public static Set<CantorSet> powerSet(CantorSet inputSet) {
-        Set<CantorSet> powerSet = new HashSet<>();
-        List<Object> elementsList = new ArrayList<>(inputSet.getElements());
-
-        // Calculate the number of subsets (2^n, where n is the number of elements in the input set)
-        int numSubsets = 1 << elementsList.size();
-
-        // Generate all possible subsets
-        for (int i = 0; i < numSubsets; i++) {
-            CantorSet subset = new CantorSet();
-            for (int j = 0; j < elementsList.size(); j++) {
-                if ((i & (1 << j)) != 0) {
-                    subset.addElement(elementsList.get(j));
-                }
-            }
-            powerSet.add(subset);
-        }
-
-        return powerSet;
-    }
+//    public static Set<CantorSet> powerSet(CantorSet inputSet) {
+//        Set<CantorSet> powerSet = new HashSet<>();
+//        List<Object> elementsList = new ArrayList<>(inputSet.getElements());
+//
+//        // Calculate the number of subsets (2^n, where n is the number of elements in the input set)
+//        int numSubsets = 1 << elementsList.size();
+//
+//        // Generate all possible subsets
+//        for (int i = 0; i < numSubsets; i++) {
+//            CantorSet subset = new CantorSet();
+//            for (int j = 0; j < elementsList.size(); j++) {
+//                if ((i & (1 << j)) != 0) {
+//                    subset.addElement(elementsList.get(j));
+//                }
+//            }
+//            powerSet.add(subset);
+//        }
+//
+//        return powerSet;
+//    }
 
     public static boolean correctInput(String input) {
         int bracketsCount = 0;

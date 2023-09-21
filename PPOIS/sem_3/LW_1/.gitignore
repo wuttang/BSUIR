@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+LW_1.iml
 
 ### Eclipse ###
 .apt_generated
