@@ -17,18 +17,19 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    for (int i = 0; i < n - 1; i++)
-        if ((a[i] + a[i + 1]) % 2 == 0) {
-            k = false;
-            break;
+    for (int i = 0; i < n - 1; i++) // Рассматриваемый участок кода // 2n+1
+        if ((a[i] + a[i + 1]) % 2 == 0) { // n
+            k = false; // n
+            break; // n
         } // сложность = 5*n+1
     if (!k) cout << "no";
     else cout << "yes";
 
     return 0;
+    // сложность всего кода 508 с
+    // 5*n+8
 }
-
-
-// сложность всего кода 508 с
-// 5*n+8
-
+// SLOC absolute = 23 ед.
+// SLOC relative = 23 / 31 = 0,741.
+// CLOC absolute = 7 ед.
+// CLOC relative = 7 / 31 = 0,23.
