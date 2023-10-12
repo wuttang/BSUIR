@@ -4,3 +4,4 @@ PIOIVIS/
 cmake-build-debug/
 .idea/
 ostis-web-platform/
+ostis-example-app/
