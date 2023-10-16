@@ -1,13 +1,13 @@
 public class Computer {
-    private double frequency;
-    private int sizeOfRAM;
-    private int sizeOfMemory;
-    private int batteryCapacity;
-    private boolean coolingSystem;
-    private int numOfCores;
-    private boolean isTurnedOn = false;
-    private String password = null;
-    private boolean passwordSetted = false;
+    private final double frequency;
+    private final int sizeOfRAM;
+    private final int sizeOfMemory;
+    private final int batteryCapacity;
+    private final boolean coolingSystem;
+    private final int numOfCores;
+    private boolean isTurnedOn;
+    private String password;
+    private boolean passwordSetted;
     private boolean isUnlocked = true;
 
     public Computer(double frequency, int sizeOfRAM, int sizeOfMemory, int batteryCapacity, boolean coolingSystem, int numOfCores) {
@@ -35,6 +35,9 @@ public class Computer {
     }
 
     public void setPassword(String password) {
+        if (password == null || password.isEmpty()){
+            return;
+        }
         this.password = password;
         passwordSetted = true;
         isUnlocked = false;
@@ -42,6 +45,9 @@ public class Computer {
     }
 
     public void changePassword(String newPassword) {
+        if (newPassword == null || newPassword.isEmpty()){
+            return;
+        }
         if (passwordSetted) {
             this.password = newPassword;
             System.out.println("Passwords has been changed.");
@@ -51,6 +57,7 @@ public class Computer {
     }
 
     public void unlockComputer(String enteredPassword) throws Exception {
+
         if (passwordSetted) {
             if (enteredPassword.equals(password)) {
                 isUnlocked = true;

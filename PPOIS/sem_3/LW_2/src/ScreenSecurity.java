@@ -1,9 +1,9 @@
 public class ScreenSecurity {
-    private double size;
-    private TypeOfScreenSecurity type;
-    private double thickness;
+    private final double size;
+    private final ScreenSecurityType type;
+    private final double thickness;
 
-    public ScreenSecurity(double size, TypeOfScreenSecurity type, double thickness) {
+    public ScreenSecurity(double size, ScreenSecurityType type, double thickness) {
         this.size = size;
         this.type = type;
         this.thickness = thickness;
@@ -13,7 +13,7 @@ public class ScreenSecurity {
         return size;
     }
 
-    public TypeOfScreenSecurity getType() {
+    public ScreenSecurityType getType() {
         return type;
     }
 

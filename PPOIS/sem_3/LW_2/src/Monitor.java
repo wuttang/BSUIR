@@ -1,13 +1,13 @@
 public class Monitor {
-    private double sizeOfScreen;
-    private int resolutionX;
-    private int resolutionY;
-    private TypeOfScreen type;
+    private final double sizeOfScreen;
+    private final int resolutionX;
+    private final int resolutionY;
+    private final ScreenType type;
     private int brightness = 5;
-    private int frequency;
+    private final int frequency;
     private boolean isTurnedOn = false;
 
-    public Monitor(double sizeOfScreen, int resolutionX, int resolutionY, TypeOfScreen type, int frequency) {
+    public Monitor(double sizeOfScreen, int resolutionX, int resolutionY, ScreenType type, int frequency) {
         this.sizeOfScreen = sizeOfScreen;
         this.resolutionX = resolutionX;
         this.resolutionY = resolutionY;
@@ -42,7 +42,7 @@ public class Monitor {
         return resolutionY;
     }
 
-    public TypeOfScreen getType() {
+    public ScreenType getType() {
         return type;
     }
 

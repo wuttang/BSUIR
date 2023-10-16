@@ -1,4 +1,4 @@
-public enum MaterialOfCase {
+public enum CaseMaterial {
     SILICONE,
     LEATHER,
     CARBON,

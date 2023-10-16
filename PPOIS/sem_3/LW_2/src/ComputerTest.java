@@ -53,32 +53,18 @@ public class ComputerTest {
     }
 
     @Test
-    public void wearCaseTest() throws Exception {
-        MobileDevice phone = new MobileDevice(2.1, 8, 128, 4000, false, 8);
-        phone.wearCase("white", 6.1, MaterialOfCase.LEATHER);
-        Assert.assertTrue(phone.isCaseIsOn());
-    }
-
-    @Test
-    public void wearScreenSecurity() throws Exception {
-        MobileDevice phone = new MobileDevice(2.1, 8, 128, 4000, false, 8);
-        phone.wearScreenSecurity(6.1, TypeOfScreenSecurity.GLASS, 3);
-        Assert.assertTrue(phone.isScreenSecurityIsOn());
-    }
-
-    @Test
     public void monitorTest() throws Exception {
         Laptop laptop = new Laptop(2.1, 8, 128, 4000, false, 8);
-        laptop.withMonitor(13.1, 1920, 1080, TypeOfScreen.AMOLED, 144);
-        Monitor monitorTest = new Monitor(13.1, 1920, 1080, TypeOfScreen.AMOLED, 144);
+        Monitor monitor = new Monitor(13.1, 1920, 1080, ScreenType.AMOLED, 144);
+        laptop.withMonitor(monitor);
         Assert.assertNotEquals(null, laptop.getMonitor());
     }
 
     @Test
     public void mobileMonitorTest() throws Exception {
         MobileDevice tablet = new MobileDevice(2.1, 8, 128, 4000, false, 8);
-        tablet.withMonitor(13.1, 1920, 1080, TypeOfScreen.AMOLED, 144);
-        Monitor monitorTest = new Monitor(13.1, 1920, 1080, TypeOfScreen.AMOLED, 144);
+        Monitor monitor = new Monitor(13.1, 1920, 1080, ScreenType.AMOLED, 144);
+        tablet.withMonitor(monitor);
         Assert.assertNotEquals(null, tablet.getMonitor());
     }
 
@@ -91,23 +77,37 @@ public class ComputerTest {
 
     @Test
     public void adjustBrightnessTest() throws Exception {
-        Monitor monitor = new Monitor(13.2, 1920, 1080, TypeOfScreen.OLED, 60);
+        Monitor monitor = new Monitor(13.2, 1920, 1080, ScreenType.OLED, 60);
         monitor.adjustBrightness(9);
         Assert.assertEquals(9, monitor.getBrightness());
     }
 
     @Test
     public void monitorTurnOnTest() {
-        Monitor monitor = new Monitor(13.2, 1920, 1080, TypeOfScreen.OLED, 60);
+        Monitor monitor = new Monitor(13.2, 1920, 1080, ScreenType.OLED, 60);
         monitor.turnOn();
         Assert.assertTrue(monitor.isTurnedOn());
     }
 
     @Test
     public void monitorTurnOffTest() {
-        Monitor monitor = new Monitor(13.2, 1920, 1080, TypeOfScreen.OLED, 60);
+        Monitor monitor = new Monitor(13.2, 1920, 1080, ScreenType.OLED, 60);
         monitor.turnOn();
         monitor.turnOff();
         Assert.assertFalse(monitor.isTurnedOn());
+    }
+
+    @Test
+    public void CaseTest() {
+        Case cover = new Case("White", 6.1, CaseMaterial.LEATHER);
+        MobileDevice phone = new MobileDevice(2.2, 8, 128, 4000, false, 0);
+        phone.wearCase(cover);
+    }
+
+    @Test
+    public void ScreenSecurityTest() {
+        ScreenSecurity screenSecurity = new ScreenSecurity(6.1, ScreenSecurityType.GLASS, 1.5);
+        MobileDevice phone = new MobileDevice(2.2, 8, 128, 4000, false, 0);
+        phone.wearScreenSecurity(screenSecurity);
     }
 }

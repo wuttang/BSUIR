@@ -1,29 +1,23 @@
-public class MobileDevice extends Computer implements WearableCase, WearableScreenSecurity, WithMonitor {
-    private Case cover = null;
-    private ScreenSecurity screenSecurity = null;
-    private Monitor monitor = null;
-    private boolean caseIsOn = false;
-    private boolean screenSecurityIsOn = false;
+public class MobileDevice extends Computer implements WithMonitor {
+    private Case cover;
+    private ScreenSecurity screenSecurity;
+    private Monitor monitor;
 
     public MobileDevice(double frequency, int sizeOfRAM, int sizeOfMemory, int batteryCapacity, boolean coolingSystem, int numOfCores) {
         super(frequency, sizeOfRAM, sizeOfMemory, batteryCapacity, coolingSystem, numOfCores);
     }
 
-    @Override
-    public void wearCase(String color, double size, MaterialOfCase material) {
-        this.cover = new Case(color, size, material);
-        caseIsOn = true;
+    public void wearCase(Case cover) {
+        this.cover = cover;
+    }
+
+    public void wearScreenSecurity(ScreenSecurity screenSecurity) {
+        this.screenSecurity = screenSecurity;
     }
 
     @Override
-    public void wearScreenSecurity(double size, TypeOfScreenSecurity type, double thickness) {
-        this.screenSecurity = new ScreenSecurity(size, type, thickness);
-        screenSecurityIsOn = true;
-    }
-
-    @Override
-    public void withMonitor(double sizeOfScreen, int resolutionX, int resolutionY, TypeOfScreen type, int frequency) {
-        this.monitor = new Monitor(sizeOfScreen, resolutionX, resolutionY, type, frequency);
+    public void withMonitor(Monitor monitor) {
+        this.monitor = monitor;
     }
 
     public void makeCall(String phoneNumber) {
@@ -47,10 +41,10 @@ public class MobileDevice extends Computer implements WearableCase, WearableScre
     }
 
     public boolean isCaseIsOn() {
-        return caseIsOn;
+        return cover != null;
     }
 
     public boolean isScreenSecurityIsOn() {
-        return screenSecurityIsOn;
+        return screenSecurity != null;
     }
 }

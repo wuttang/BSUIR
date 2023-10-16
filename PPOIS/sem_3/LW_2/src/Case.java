@@ -1,9 +1,9 @@
 public class Case {
-    private String color;
-    private double size;
-    private MaterialOfCase material;
+    private final String color;
+    private final double size;
+    private final CaseMaterial material;
 
-    public Case(String color, double size, MaterialOfCase material) {
+    public Case(String color, double size, CaseMaterial material) {
         this.color = color;
         this.size = size;
         this.material = material;
@@ -17,7 +17,7 @@ public class Case {
         return size;
     }
 
-    public MaterialOfCase getMaterial() {
+    public CaseMaterial getMaterial() {
         return material;
     }
 }

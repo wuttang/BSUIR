@@ -1,4 +1,4 @@
-public enum TypeOfScreen {
+public enum ScreenType {
     OLED,
     AMOLED,
     IPS,
