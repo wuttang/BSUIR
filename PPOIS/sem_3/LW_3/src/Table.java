@@ -1,6 +1,6 @@
 public class Table implements TableInterface{
-    private int tableNumber;
-    private int seatingCapacity;
+    private final int tableNumber;
+    private final int seatingCapacity;
     private String status;
     private Order currentOrder;
 

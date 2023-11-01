@@ -9,12 +9,20 @@ public class Chef extends Employee{
         this.garnishDish(dishName);
     }
 
-    public void garnishDish(String dishName) {
+    private void garnishDish(String dishName) {
         System.out.println(this.getName() + " is garnishing " + dishName);
         this.sendDishToServer(dishName, currentTable);
     }
 
-    public void sendDishToServer(String dishName, Table currentTable) {
+    private void sendDishToServer(String dishName, Table currentTable) {
         System.out.println(this.getName() + " is sending " + dishName + " to table " + currentTable.getTableNumber());
+    }
+
+    public void setCurrentTable(Table currentTable) {
+        this.currentTable = currentTable;
+    }
+
+    public Table getCurrentTable() {
+        return currentTable;
     }
 }

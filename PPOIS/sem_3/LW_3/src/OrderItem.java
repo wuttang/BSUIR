@@ -1,6 +1,6 @@
 public class OrderItem {
-    private MenuItem menuItem;
-    private int quantity;
+    private final MenuItem menuItem;
+    private final int quantity;
 
     public OrderItem(MenuItem menuItem, int quantity) {
         this.menuItem = menuItem;

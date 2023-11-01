@@ -1,24 +1,15 @@
 import java.util.ArrayList;
 
-public abstract class Order {
-    private ArrayList<OrderItem> items = new ArrayList<>();
+public abstract class Order implements OrderInterface {
+    protected ArrayList<OrderItem> items = new ArrayList<>();
     private Chef chef;
 
-    public void addItem(MenuItem menuItem, int quantity) {
-        OrderItem orderItem = new OrderItem(menuItem, quantity);
+    public void addItem(OrderItem orderItem) {
         items.add(orderItem);
     }
 
     public void removeItem(OrderItem orderItem) {
         items.remove(orderItem);
-    }
-
-    public double calculateTotal() {
-        double total = 0.0;
-        for (OrderItem orderItem : items) {
-            total += orderItem.getMenuItem().getPrice() * orderItem.getQuantity();
-        }
-        return total;
     }
 
     public void printReceipt() {
@@ -42,5 +33,9 @@ public abstract class Order {
 
     public void setChef(Chef chef) {
         this.chef = chef;
+    }
+
+    public ArrayList<OrderItem> getItems() {
+        return items;
     }
 }

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Menu {
-    private ArrayList<MenuItem> items = new ArrayList<>();
+    private final ArrayList<MenuItem> items = new ArrayList<>();
 
     public void addItem(MenuItem item) {
         items.add(item);
@@ -15,5 +15,9 @@ public class Menu {
         for (MenuItem item : items) {
             System.out.println(item);
         }
+    }
+
+    public ArrayList<MenuItem> getItems() {
+        return items;
     }
 }

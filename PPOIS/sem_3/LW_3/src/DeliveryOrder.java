@@ -1,6 +1,7 @@
 public class DeliveryOrder extends Order {
-    private String deliveryAddress;
+    private final String deliveryAddress;
     private String contactPhoneNumber;
+    private static final double DELIVERY_PRICE = 5.83;
 
     public DeliveryOrder(String deliveryAddress, String contactPhoneNumber) {
         super();
@@ -18,5 +19,16 @@ public class DeliveryOrder extends Order {
 
     public void setContactPhoneNumber(String contactPhoneNumber) {
         this.contactPhoneNumber = contactPhoneNumber;
+    }
+
+    public double calculateTotal() {
+        double total = 0;
+        for (OrderItem orderItem : super.items) {
+            total += orderItem.getMenuItem().getPrice() * orderItem.getQuantity();
+        }
+        if (total <= 50) {
+            total += DELIVERY_PRICE;
+        }
+        return total;
     }
 }
