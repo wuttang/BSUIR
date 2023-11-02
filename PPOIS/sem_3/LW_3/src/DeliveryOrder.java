@@ -2,6 +2,7 @@ public class DeliveryOrder extends Order {
     private final String deliveryAddress;
     private String contactPhoneNumber;
     private static final double DELIVERY_PRICE = 5.83;
+    private static final int FREE_DELIVERY_PRICE = 50;
 
     public DeliveryOrder(String deliveryAddress, String contactPhoneNumber) {
         super();
@@ -26,7 +27,7 @@ public class DeliveryOrder extends Order {
         for (OrderItem orderItem : super.items) {
             total += orderItem.getMenuItem().getPrice() * orderItem.getQuantity();
         }
-        if (total <= 50) {
+        if (total <= FREE_DELIVERY_PRICE) {
             total += DELIVERY_PRICE;
         }
         return total;

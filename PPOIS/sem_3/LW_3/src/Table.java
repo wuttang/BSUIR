@@ -31,12 +31,12 @@ public class Table implements TableInterface{
         status = "Reserved";
     }
 
-    public void occupy() {
+    public void occupy() throws Exception {
         if (status.equals("Free")) {
             status = "Occupied";
             currentOrder = new LocalOrder(this.tableNumber);
         } else {
-            System.out.println("Table has been reserved");
+            throw new Exception("Table has been reserved.");
         }
     }
 
