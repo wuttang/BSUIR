@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/struct" idtf="subject_domain_of_series" shapeColor="0" id="2701833562672" parent="2701831898080" left="0" top="0" right="152" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="306" y="418.951" haveBus="false" idtf_pos="1">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/relation" idtf="" shapeColor="0" id="2701833560800" parent="2701831898080" x="548.5" y="295.451" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/role" idtf="rrel_explored_relation" shapeColor="0" id="2701833571616" parent="2701831898080" left="0" top="0" right="135" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="393.5" y="291.451" haveBus="false" idtf_pos="3">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/relation" idtf="nrel_reciprocity" shapeColor="0" id="2701833571200" parent="2701831898080" left="0" top="0" right="97" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="686.5" y="403.451" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/relation" idtf="" shapeColor="0" id="2701833571408" parent="2701831898080" x="550.5" y="519.451" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701756530064" parent="2701831898080" id_b="2701833571616" id_e="2701756522864" b_x="393.5" b_y="291.451" e_x="40.5" e_y="-44.5486" dotBBalance="0" dotEBalance="0.365855">
+            <points/>
+        </pair>
+        <pair type="pair/var/-/perm/noorien" idtf="" shapeColor="0" id="2701756523584" parent="2701831898080" id_b="2701833560800" id_e="2701833571408" b_x="548.5" b_y="295.451" e_x="550.5" e_y="519.451" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701756522624" parent="2701831898080" id_b="2701833571616" id_e="2701756529104" b_x="393.5" b_y="291.451" e_x="40.5" e_y="-44.5486" dotBBalance="0" dotEBalance="0.548118">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701756526464" parent="2701831898080" id_b="2701833571200" id_e="2701756523584" b_x="686.5" b_y="403.451" e_x="40.5" e_y="-44.5486" dotBBalance="0" dotEBalance="0.490148">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701756529104" parent="2701831898080" id_b="2701833562672" id_e="2701833560800" b_x="306" b_y="418.951" e_x="548.5" e_y="295.451" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701756522864" parent="2701831898080" id_b="2701833562672" id_e="2701833571408" b_x="306" b_y="418.951" e_x="550.5" e_y="519.451" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="p9" shapeColor="0" id="2701831898080" parent="0" left="0" top="0" right="22" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" idtf_pos_x="-28" idtf_pos_y="-220">
+            <points>
+                <point x="32.5" y="177.451"/>
+                <point x="32.5" y="633.451"/>
+                <point x="855.5" y="633.451"/>
+                <point x="855.5" y="175.451"/>
+            </points>
+        </contour>
+    </staticSector>
+</GWF>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/struct" idtf="section_subject_domain_of_series" shapeColor="0" id="2701757402464" parent="2701751469152" left="0" top="0" right="198" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="223.747" y="400.96" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="" shapeColor="0" id="2701757407040" parent="2701751469152" x="587.247" y="401.46" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/role" idtf="rrel_key_sc_element" shapeColor="0" id="2701757405376" parent="2701751469152" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="408.247" y="261.46" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701755787088" parent="2701751469152" id_b="2701757405376" id_e="2701755783488" b_x="408.247" b_y="261.46" e_x="-90.7525" e_y="15.4597" dotBBalance="0" dotEBalance="0.507988">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2701755783488" parent="2701751469152" id_b="2701757402464" id_e="2701757407040" b_x="223.747" b_y="400.96" e_x="587.247" e_y="401.46" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="p2" shapeColor="0" id="2701751469152" parent="0" left="0" top="0" right="22" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" idtf_pos_x="-30" idtf_pos_y="-117">
+            <points>
+                <point x="177.247" y="461.46"/>
+                <point x="174.247" y="223.46"/>
+                <point x="671.247" y="222.46"/>
+                <point x="671.247" y="459.46"/>
+            </points>
+        </contour>
+    </staticSector>
+</GWF>
