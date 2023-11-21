@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="496.0" style="-fx-background-color: #B8CABA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lb5.controllers.SimpleCyclesController">
+   <children>
+      <VBox fx:id="vBox" alignment="TOP_CENTER" prefHeight="435.0" prefWidth="389.0" spacing="10.0">
+         <children>
+            <Label text="Эйлеровы циклы">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="cyclesTable" prefHeight="374.0" prefWidth="389.0" style="-fx-background-color: #E1E1E1;">
+              <columns>
+                  <TableColumn fx:id="cyclesColumn" prefWidth="388.7999939084053" text="Циклы" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

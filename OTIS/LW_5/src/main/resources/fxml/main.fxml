@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lb5.controllers.MainController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="251.6" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="717.6" minWidth="10.0" prefWidth="649.2" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="354.6" minHeight="10.0" prefHeight="340.6" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="161.40000000000003" minHeight="10.0" prefHeight="72.19999999999999" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="261.0" spacing="6.0" style="-fx-background-color: #B8CABA;" GridPane.rowSpan="3">
+         <children>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="248.0" spacing="10.0">
+               <children>
+                  <Label text="Узел">
+                     <font>
+                        <Font name="Gill Sans" size="18.0" />
+                     </font>
+                  </Label>
+                  <ColorPicker fx:id="nodeColorPicker">
+                     <value>
+                        <Color />
+                     </value>
+                  </ColorPicker>
+               </children>
+            </HBox>
+            <TextField fx:id="nodeName" prefHeight="26.0" prefWidth="180.0" promptText="Имя узла" style="-fx-background-color: #E1E1E1;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Ребро">
+                     <font>
+                        <Font name="Gill Sans" size="18.0" />
+                     </font>
+                  </Label>
+                  <ColorPicker fx:id="edgeColorPicker">
+                     <value>
+                        <Color />
+                     </value></ColorPicker>
+               </children>
+            </HBox>
+            <TextField fx:id="edgeWeight" prefHeight="26.0" prefWidth="181.0" promptText="Вес ребра" style="-fx-background-color: #E1E1E1;">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></TextField>
+            <RadioButton fx:id="orientToggle" mnemonicParsing="false" selected="true" text="Ориентированное">
+               <toggleGroup>
+                  <ToggleGroup fx:id="graphOrientation" />
+               </toggleGroup>
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="nonorientToggle" mnemonicParsing="false" text="Неориентированное" toggleGroup="$graphOrientation">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></RadioButton>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Сохранение графа">
+               <font>
+                  <Font name="Gill Sans" size="18.0" />
+               </font>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#onSaveButtonClicked" style="-fx-background-color: #5A6B5D;" text="Сохранить граф в файл" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onOpenButtonClicked" style="-fx-background-color: #5A6B5D;" text="Открыть граф из файла" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font>
+            </Button>
+            <Label lineSpacing="10.0" text="Информация">
+               <font>
+                  <Font name="Gill Sans" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#showAdjacencyMatrix" style="-fx-background-color: #5A6B5D;" text="Просмотреть матрицу инцидентности" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#isGraphConnected" style="-fx-background-color: #5A6B5D;" text="Является ли граф связным?" textFill="#f2f2f2">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#leadToConnectedGraph" style="-fx-background-color: #5A6B5D;" text="Привести к связному графу" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#findCycles" style="-fx-background-color: #5A6B5D;" text="Нахождение эйлеровых циклов" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#findAllPathsBetweenNodes" style="-fx-background-color: #5A6B5D;" text="Все пути между 2-мя узлами" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#findDistanceBetweenNodes" style="-fx-background-color: #5A6B5D;" text="Расстояние между 2-мя узлами" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#clearGraph" style="-fx-background-color: #6f1e1e;" text="Очистить граф" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans" size="13.0" />
+               </font></Button>
+            <Label />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <Canvas fx:id="canvas" height="600.0" onMouseClicked="#clickOnCanvas" width="800.0" GridPane.columnIndex="1" GridPane.rowSpan="3" />
+      <TilePane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <TabPane prefHeight="48.0" prefWidth="650.0" tabClosingPolicy="ALL_TABS">
+               <tabs>
+                  <Tab text="graph1">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="graph2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children></TilePane>
+   </children>
+</GridPane>

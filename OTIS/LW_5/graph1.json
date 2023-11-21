@@ -1,0 +1,370 @@
+{
+  "nodes" : [ {
+    "coordX" : 169.0,
+    "coordY" : 239.5,
+    "info" : "17",
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    }
+  }, {
+    "coordX" : 285.0,
+    "coordY" : 311.5,
+    "info" : "18",
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    }
+  }, {
+    "coordX" : 178.0,
+    "coordY" : 144.5,
+    "info" : "19",
+    "color" : {
+      "red" : 0.9019607901573181,
+      "green" : 0.3019607961177826,
+      "blue" : 0.3019607961177826,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.6652173803862192,
+      "brightness" : 0.9019607901573181
+    }
+  }, {
+    "coordX" : 244.0,
+    "coordY" : 176.5,
+    "info" : "20",
+    "color" : {
+      "red" : 0.9019607901573181,
+      "green" : 0.3019607961177826,
+      "blue" : 0.3019607961177826,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.6652173803862192,
+      "brightness" : 0.9019607901573181
+    }
+  } ],
+  "edges" : [ {
+    "startNode" : {
+      "coordX" : 285.0,
+      "coordY" : 311.5,
+      "info" : "18",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "finishNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  }, {
+    "startNode" : {
+      "coordX" : 244.0,
+      "coordY" : 176.5,
+      "info" : "20",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "finishNode" : {
+      "coordX" : 178.0,
+      "coordY" : 144.5,
+      "info" : "19",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : true
+  }, {
+    "startNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "finishNode" : {
+      "coordX" : 285.0,
+      "coordY" : 311.5,
+      "info" : "18",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  }, {
+    "startNode" : {
+      "coordX" : 178.0,
+      "coordY" : 144.5,
+      "info" : "19",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "finishNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  }, {
+    "startNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "finishNode" : {
+      "coordX" : 178.0,
+      "coordY" : 144.5,
+      "info" : "19",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  }, {
+    "startNode" : {
+      "coordX" : 244.0,
+      "coordY" : 176.5,
+      "info" : "20",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "finishNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  }, {
+    "startNode" : {
+      "coordX" : 169.0,
+      "coordY" : 239.5,
+      "info" : "17",
+      "color" : {
+        "red" : 0.0,
+        "green" : 0.0,
+        "blue" : 0.0,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.0,
+        "brightness" : 0.0
+      }
+    },
+    "finishNode" : {
+      "coordX" : 244.0,
+      "coordY" : 176.5,
+      "info" : "20",
+      "color" : {
+        "red" : 0.9019607901573181,
+        "green" : 0.3019607961177826,
+        "blue" : 0.3019607961177826,
+        "opacity" : 1.0,
+        "opaque" : true,
+        "hue" : 0.0,
+        "saturation" : 0.6652173803862192,
+        "brightness" : 0.9019607901573181
+      }
+    },
+    "weight" : null,
+    "color" : {
+      "red" : 0.0,
+      "green" : 0.0,
+      "blue" : 0.0,
+      "opacity" : 1.0,
+      "opaque" : true,
+      "hue" : 0.0,
+      "saturation" : 0.0,
+      "brightness" : 0.0
+    },
+    "orient" : false
+  } ],
+  "nodeColors" : [ {
+    "color" : [ 0.0, 0.0, 0.0, 1.0 ]
+  }, {
+    "color" : [ 0.0, 0.0, 0.0, 1.0 ]
+  }, {
+    "color" : [ 0.9019607901573181, 0.3019607961177826, 0.3019607961177826, 1.0 ]
+  }, {
+    "color" : [ 0.9019607901573181, 0.3019607961177826, 0.3019607961177826, 1.0 ]
+  } ]
+}
