@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пылесос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать в управление пылесосом</h1>
+        <form action="/submit_vc" method="post">
+            <fieldset>
+                <legend>Создать новый пылесос</legend>
+                <label for="color">Цвет пылесоса:</label>
+                <input type="text" id="color" name="color" required>
+                <br>
+                <label for="firm">Фирма пылесоса:</label>
+                <input type="text" id="firm" name="firm" required>
+                <br>
+                <label for="min_power">Минимальная мощность (Вт):</label>
+                <input type="number" id="min_power" name="min_power" required>
+                <br>
+                <label for="max_power">Максимальная мощность (Вт):</label>
+                <input type="number" id="max_power" name="max_power" required>
+                <br>
+                <input type="submit" value="Создать пылесос">
+            </fieldset>
+        </form>
+
+        <hr>
+
+        <form action="/main" method="get">
+            <fieldset>
+                <legend>Выбрать уже имеющийся пылесос</legend>
+                <label for="existing_vacuum">Выберите пылесос:</label>
+                <select id="existing_vacuum" name="existing_vacuum">
+                    {% for vacuum in vacuum_cleaners %}
+                        <option value="{{ loop.index0 }}">{{ vacuum.firm }} - {{ vacuum.color }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <input type="submit" value="Использовать этот пылесос">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

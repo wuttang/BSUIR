@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Убрать помещение</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Убрать помещение</h1>
+        {% if vacuum %}
+            <div class="vacuum-info">
+                <h2>Пылесос: {{ vacuum.firm }} - {{ vacuum.color }}</h2>
+                <p>Мин. мощность: {{ vacuum.engine.min_power }} Вт</p>
+                <p>Макс. мощность: {{ vacuum.engine.max_power }} Вт</p>
+            </div>
+        {% endif %}
+        <div class="message">
+            <p>{{ message }}</p>
+        </div>
+        <form method="get">
+            <input type="hidden" name="existing_vacuum" value="{{ existing_vacuum }}">
+            <label for="length">Длина комнаты:</label>
+            <input type="number" id="length" name="length" required>
+            <label for="width">Ширина комнаты:</label>
+            <input type="number" id="width" name="width" required>
+            <button type="submit">Начать уборку</button>
+        </form>
+        <div class="menu">
+            <a href="{{ url_for('main_page', existing_vacuum=existing_vacuum) }}"><button>Назад</button></a>
+        </div>
+    </div>
+</body>
+</html>

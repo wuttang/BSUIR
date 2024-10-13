@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить мощность</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Изменить мощность</h1>
+        <div class="vacuum-info">
+            <h2>Пылесос: {{ vacuum.firm }} - {{ vacuum.color }}</h2>
+            <p>Мин. мощность: {{ vacuum.engine.min_power }} Вт</p>
+            <p>Макс. мощность: {{ vacuum.engine.max_power }} Вт</p>
+        </div>
+        {% if message %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+        <form method="post">
+            <input type="hidden" name="existing_vacuum" value="{{ existing_vacuum }}">
+            <label for="power">Новая мощность (Вт):</label>
+            <input type="number" id="power" name="power" required>
+            <input type="submit" value="Изменить">
+        </form>
+        <div class="menu">
+            <a href="{{ url_for('main_page', existing_vacuum=existing_vacuum) }}"><button>Назад</button></a>
+        </div>
+    </div>
+</body>
+</html>

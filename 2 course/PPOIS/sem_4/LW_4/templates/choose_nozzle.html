@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбрать насадку</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Выбрать насадку</h1>
+        <form action="{{ url_for('choose_nozzle') }}" method="post">
+            <input type="hidden" name="existing_vacuum" value="{{ existing_vacuum }}">
+            <div class="form-group">
+                <label for="nozzle">Выберите насадку:</label>
+                <select name="nozzle" id="nozzle" required>
+                    <option value="Turbo Brush">Turbo Brush</option>
+                    <option value="Slot Nozzle">Slot Nozzle</option>
+                    <option value="Round Nozzle">Round Nozzle</option>
+                    <option value="Laminate Nozzle">Laminate Nozzle</option>
+                    <option value="Corner Nozzle">Corner Nozzle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Выбрать</button>
+            </div>
+            <div class="menu">
+            <a href="{{ url_for('main_page', existing_vacuum=existing_vacuum) }}"><button>Назад</button></a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

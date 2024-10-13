@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Посмотреть засоренность фильтра</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Посмотреть засоренность фильтра</h1>
+        <div class="vacuum-info">
+            <h2>Пылесос: {{ vacuum.firm }} - {{ vacuum.color }}</h2>
+            <p>Мин. мощность: {{ vacuum.engine.min_power }} Вт</p>
+            <p>Макс. мощность: {{ vacuum.engine.max_power }} Вт</p>
+        </div>
+        <div class="message">
+            <p>{{ message }}</p>
+        </div>
+        <div class="menu">
+            <a href="{{ url_for('main_page', existing_vacuum=existing_vacuum) }}"><button>Назад</button></a>
+        </div>
+    </div>
+</body>
+</html>

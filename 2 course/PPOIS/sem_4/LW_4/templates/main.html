@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление пылесосом</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление пылесосом</h1>
+        <div class="vacuum-info">
+            <h2>Пылесос: {{ vacuum.firm }} - {{ vacuum.color }}</h2>
+            <p>Мин. мощность: {{ vacuum.engine.min_power }} Вт</p>
+            <p>Макс. мощность: {{ vacuum.engine.max_power }} Вт</p>
+        </div>
+
+        <div class="menu">
+            <a href="{{ url_for('start_vc', existing_vacuum=existing_vacuum) }}"><button>Запустить пылесос</button></a>
+            <a href="{{ url_for('choose_nozzle', existing_vacuum=existing_vacuum) }}"><button>Выбрать насадку</button></a>
+            <a href="{{ url_for('check_filter', existing_vacuum=existing_vacuum) }}"><button>Посмотреть засоренность фильтра</button></a>
+            <a href="{{ url_for('check_dust_container', existing_vacuum=existing_vacuum) }}"><button>Посмотреть засорен ли контейнер для пыли</button></a>
+            <a href="{{ url_for('check_nozzle', existing_vacuum=existing_vacuum) }}"><button>Посмотреть какая насадка надета</button></a>
+            <a href="{{ url_for('change_power', existing_vacuum=existing_vacuum) }}"><button>Изменить текущую мощность</button></a>
+            <a href="{{ url_for('check_power', existing_vacuum=existing_vacuum) }}"><button>Посмотреть установленную мощность</button></a>
+            <a href="{{ url_for('clean_room', existing_vacuum=existing_vacuum) }}"><button>Выполнить уборку</button></a>
+            <a href="{{ url_for('change_filter', existing_vacuum=existing_vacuum) }}"><button>Заменить фильтр</button></a>
+            <a href="{{ url_for('change_dust_container', existing_vacuum=existing_vacuum) }}"><button>Очистить контейнер для пыли</button></a>
+            <a href="{{ url_for('change_nozzle', existing_vacuum=existing_vacuum) }}"><button>Заменить насадку</button></a>
+            <a href="{{ url_for('technical_work', existing_vacuum=existing_vacuum) }}"><button>Техническое обслуживание</button></a>
+            <a href="{{ url_for('leave') }}"><button>Выход</button></a>
+        </div>
+    </div>
+</body>
+</html>

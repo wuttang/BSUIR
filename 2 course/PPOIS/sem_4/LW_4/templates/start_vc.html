@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запустить пылесос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Запустить пылесос</h1>
+        {% if message %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+        <form action="{{ url_for('start_vc') }}" method="get">
+            <input type="hidden" name="existing_vacuum" value="{{ existing_vacuum }}">
+            <div class="form-group">
+                <label for="power">Введите текущую мощность(Вт):</label>
+                <input type="number" name="power" id="power" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Запуск</button>
+            </div>
+        </form>
+        <div class="menu">
+            <a href="{{ url_for('main_page', existing_vacuum=existing_vacuum) }}"><button>Назад</button></a>
+        </div>
+    </div>
+</body>
+</html>
